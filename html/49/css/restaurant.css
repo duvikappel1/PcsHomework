@@ -1,0 +1,43 @@
+html {
+    background-color: greenyellow;
+    font-style: italic;
+}
+
+body {
+    color: bisque;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 250%;
+}
+
+h2 {
+    color: plum;
+    text-align: center;
+    font-size: 200%;
+}
+
+header {
+    border: 3px dashed violet;
+    text-align: center;
+    border-bottom: 3px inset gray;
+    border-radius: 18px;
+}
+  
+h3 {
+    color: blueviolet;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
+    color: blueviolet;
+    font-style: normal;
+    font-weight: bolder;
+}
