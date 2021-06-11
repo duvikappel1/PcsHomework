@@ -1,0 +1,23 @@
+html{
+    background-color: white;
+}
+div{
+    background-color: yellow;
+    border-color: black;
+    border: 3px solid;
+    width: 200px;
+    height: 50px;
+    /*float:left*/
+    margin: 2em;
+    padding-top: 40px;
+    display: inline-block;
+    text-align: center;
+}
+p{
+    clear: left;
+}
+
+html{
+    padding-left: 250px;
+    max-width: 800;
+}
