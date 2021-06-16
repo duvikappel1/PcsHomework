@@ -27,11 +27,14 @@ h2 {
 
 header {
     text-align: center;
-    border-bottom: 3px inset gray;
+    border: 3px inset gray;
     border-radius: 18px;
     padding-bottom: 1 ;
 }
-  
+header img{
+    border: 3px inset blue;
+    border-radius: 9px;
+} 
 h3 {
     color:greenyellow;
     text-align: center;

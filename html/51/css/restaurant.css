@@ -1,0 +1,80 @@
+html {
+    background-color: white;
+    font-style: italic;
+    max-width: 800;
+}
+
+body {
+    background-color: black;
+    color: bisque;
+    margin: auto;
+    padding-bottom: 5em;
+    padding-top: 1em; /*t*/
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 250%;
+    font-weight: 800;
+}
+
+h2 {
+    color: plum;
+    text-align: center;
+    font-size: 200%;
+}
+
+header {
+    text-align: center;
+    border: 3px inset gray;
+    border-radius: 18px;
+    padding-bottom: 1 ;
+}
+header img{
+    border: 3px inset blue;
+    border-radius: 9px;
+} 
+h3 {
+    color:greenyellow;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
+    color: blueviolet;
+    font-style: normal;
+    font-weight: bolder;
+    overflow: scroll;
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;  
+}
+a:link {
+    color: teal;
+}
+a:hover {
+    color:silver;
+    
+}
+#trademark, h1 span {
+    font-weight:bolder;
+    font-style:italic;
+    color: orangered;
+    text-decoration: underline overline;
+    text-shadow: plum;
+    text-align: right;
+ }
+ #trademark span, h1 span{
+    background-color: royalblue;
+ }
+ .menucategories{
+     size: 100%;
+     list-style-position: inside;
+ }

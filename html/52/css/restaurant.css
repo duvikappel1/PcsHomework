@@ -1,0 +1,117 @@
+html {
+    background-color: white;
+    
+    max-width: 800;
+}
+body {
+    font-family: 'Tangerine', serif;
+    
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */;
+  }
+  
+ 
+  
+body {
+    background-color: black;
+    color: bisque;
+    margin: auto;
+    padding-bottom: 5em;
+    padding-top: 1em; /*t*/
+    
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 250%;
+    font-weight: 800;
+}
+
+h2 {
+    color: plum;
+    text-align: center;
+    font-size: 200%;
+}
+
+header {
+    text-align: center;
+    border: 3px inset gray;
+    border-radius: 18px;
+    padding-bottom: 1 ;
+}
+header img{
+    border: 3px inset blue;
+    border-radius: 9px;
+} 
+h3 {
+    color:greenyellow;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
+    color: blueviolet;
+    font-style: normal;
+    font-weight: bolder;
+    overflow: scroll;
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;  
+}
+a:link {
+    color: teal;
+}
+a:hover {
+    color:silver;
+    
+}
+#trademark, h1 span {
+    font-weight:bolder;
+    font-style:italic;
+    color: orangered;
+    text-decoration: underline overline;
+    text-shadow: plum;
+    text-align: right;
+ }
+ #trademark span, h1 span{
+    background-color: royalblue;
+ }
+ .menucategories{
+     size: 100%;
+     list-style-position: inside;
+ }
+ video {
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 1em;
+  }
+  h1, h3{
+    position: fixed;
+    text-align: center;
+    
+    max-width: 800px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+  }
+
+  h1 {
+    top: 0;
+    height: 1em;
+  }
+
+  h3 {
+    bottom: 0;
+    height: 1em;
+  }
