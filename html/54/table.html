@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/restaurant.css"> 
+  <style>
+     
+    table {
+      /*border: 1px solid black;*/
+      border-collapse: collapse ;
+      text-align: center;
+    }
+
+    td, th {
+      /*border-top: 1px solid black;
+      border-bottom: 1px solid black;*/
+      border: 1px solid black !important;
+      padding: .5em 1em !important;
+    }
+
+    td {
+      text-align: right;
+    }
+
+    tfoot td {
+      color: red;
+    }
+
+    caption {
+      font-weight: bold;
+      font-style: italic;
+      caption-side: top;
+    }
+
+    tbody tr:hover {
+      background-color: lightskyblue !important;
+    }
+
+    /*.even {*/
+      /* 2 * 0, 2 * 1, 2 * 2, 2 * 3, etc.. */
+    /*tbody tr:nth-child(2n) {*/
+    /*  tbody tr:nth-child(odd) {*/
+    tbody tr:nth-child(2n+1) {
+      background-color: rebeccapurple;
+    }
+    td:nth-child(1),th,tfoot {  
+    color: seagreen;
+    background-color: violet;
+    text-align: center;
+    text-size-adjust: 6px;
+    }
+    td:last-child {  
+    color: seagreen;
+    background-color: violet;
+    text-align: center;
+    text-size-adjust: 6px;
+    }
+    
+
+  </style>
+  
+</head>
+<body>
+  <table>
+    <caption>Amount of items sold</caption>
+    <thead>
+      <tr>
+        <th></th>
+        <th>2015</th>
+        <th>2016</th>
+        <th>2017</th>
+        <th>2018</th>
+        <th>2019</th>
+        <th>2020</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Burgers</td>
+        <td>2648</td>
+        <td>3565</td>
+        <td>5978</td>
+        <td>7565</td>
+        <td>8987</td>
+        <td>9545</td>
+        <td>798685</td>
+      </tr>
+      <tr>
+        <td>Chicken Sandwichs</td>
+        <td>877</td>
+        <td>1787</td>
+        <td>2534</td>
+        <td>3968</td>
+        <td>4324</td>
+        <td>5546</td>
+        <td>798685</td>
+      </tr>
+      <tr>
+        <td>Steak Sandwiches</td>
+        <td>1675</td>
+        <td>2565</td>
+        <td>3978</td>
+        <td>4565</td>
+        <td>5987</td>
+        <td>6545</td>
+        <td>798685</td>
+      </tr>
+      <tr>
+        <td>Buffalo Wings</td>
+        <td>1877</td>
+        <td>2787</td>
+        <td>3534</td>
+        <td>4968</td>
+        <td>5324</td>
+        <td>6546</td>
+        <td>798685</td>
+      </tr>
+      <tr>
+        <td>Pepper Steak</td>
+        <td>1945</td>
+        <td>2453</td>
+        <td>3502</td>
+        <td>4312</td>
+        <td>5634</td>
+        <td>6845</td>
+        <td>798685</td>
+      </tr>
+     
+    </tbody>
+     <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>5454676</td>
+            <td>7657345</td>
+            <td>435345</td>
+            <td>65645</td>
+            <td>65657</td>
+            <td>798685</td>
+            <td>798685</td>
+          </tr>
+     </tfoot>
+    
+  </table>
+  <a href="index.html">home page</a> 
+</body>
+</html>
