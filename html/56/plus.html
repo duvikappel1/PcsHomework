@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: grid;
+        grid-template: repeat(24, 1em)/repeat(24, 1em);
+
+        
+    }
+    div:nth-child(4){
+        background-color: red;
+        grid-row: 1 / 11;
+        grid-column: 10/12; 
+        
+        
+    }
+    div:nth-child(3){
+        background-color: green;
+        grid-row: 10 / 12;
+        grid-column: 1/ 11;
+    }
+    div:nth-child(2){
+        background-color: brown;
+        grid-row: 11 / 21;
+        grid-column: 10/ 12;
+    }
+    div:nth-child(1){
+        background-color: purple;
+        grid-row: 10 / 12;
+        grid-column: 11 / 21;
+    }
+    div:nth-child(5){
+        background-color: purple;
+        grid-row: 10 / 11;
+        grid-column: 11 / 12;
+    }
+</style>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</body>
+</html>
