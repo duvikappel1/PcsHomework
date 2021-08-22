@@ -17,6 +17,7 @@
         account1.transaction(10);
         account2.transaction(10);
         console.log(account1, account2);
+        console.log(account1, account2);
         
     })();
 
