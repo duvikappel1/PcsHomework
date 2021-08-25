@@ -1,10 +1,10 @@
-var utils = function (){
+var utils = function (module){
     'use strict';
-    function compare(a, b){
+    module.compare = function (a, b){
         return a.toLowerCase() === b.toLowerCase();
     }
-    return{
-        compare: compare
-    };
-}();
+    return module;
+    
+    
+}(utils || {});
 console.log(utils.compare('A', 'a'));

@@ -1,20 +1,17 @@
 
-var utils = function (){
+var utils = function (module){
     'use strict';
     const days=['Sunday','Monday','Tuesday']
-    function getDays(index){
+    module.getDays = function (index){
         return days[index];
     }
-    function getIndex(day){
+    module.getIndex = function (day){
         const dow = day.toLowerCase();
         return days.findIndex(day => dow === day.toLowerCase());
     }
-    return{
-        getDays: getDays,
-        getIndex: getIndex
-    };
+    return module;
 
-}();
+}(utils || {});
 
 console.log(utils.getDays(1));
 console.log(utils.getIndex('Sunday'));
