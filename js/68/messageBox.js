@@ -20,18 +20,34 @@ window.pcs.messageBox = (function () {
   modalDiv.style.display = 'none';
   document.body.appendChild(modalDiv);
 
-  function showMessageBox(msg, modal, yes, no, maybe) {
+  function showMessageBox(msg, modal, choices=['ok'], callback = undefined) {
     const messageBoxDiv = document.createElement('div');
     const span = document.createElement('span');
     span.innerHTML = msg;
     messageBoxDiv.appendChild(span);
-
     const buttonsDiv = document.createElement('div');
-    const okButton = document.createElement('button');
-    okButton.innerText = 'ok';
-    buttonsDiv.appendChild(okButton);
     messageBoxDiv.appendChild(buttonsDiv);
-
+   
+    for(let i=0; i < choices.length; i++){
+     const button = document.createElement('button');   
+     button.innerText = choices[i];
+     buttonsDiv.appendChild(button);
+     messageBoxDiv.appendChild(buttonsDiv);
+     buttonsDiv.style.position = 'absolute';
+     buttonsDiv.style.bottom = '8px';
+     buttonsDiv.style.left = 0;
+     buttonsDiv.style.textAlign = 'center';
+     buttonsDiv.style.width = '100%';
+     button.addEventListener('click', () => {
+        //messageBoxDiv.style.display = 'none';
+        messageBoxDiv.remove();
+  
+        modalDiv.style.display = 'none';
+        if (callback) {
+            callback(choices[i]);
+          }
+      });
+    }    
     document.body.appendChild(messageBoxDiv);
 
     messageBoxDiv.style.backgroundColor = 'lightblue';
@@ -51,11 +67,7 @@ window.pcs.messageBox = (function () {
     span.style.height = '100%';
     span.style.display = 'inline-block';
 
-    buttonsDiv.style.position = 'absolute';
-    buttonsDiv.style.bottom = '8px';
-    buttonsDiv.style.left = 0;
-    buttonsDiv.style.textAlign = 'center';
-    buttonsDiv.style.width = '100%';
+    
 
     messageBoxDiv.className = 'messageBox';
 
@@ -63,38 +75,13 @@ window.pcs.messageBox = (function () {
       modalDiv.style.display = 'block';
       modalDiv.style.zIndex = nextZIndex++;
     }
-    if (yes) {
-        const buttonsDiv = document.createElement('div');
-    const yesButton = document.createElement('button');
-    okButton.innerText = 'yes';
-    buttonsDiv.appendChild(yesButton);
-    messageBoxDiv.appendChild(buttonsDiv);
-
-      }
-      if (no) {
-        const buttonsDiv = document.createElement('div');
-        const noButton = document.createElement('button');
-        okButton.innerText = 'no';
-        buttonsDiv.appendChild(noButton);
-        messageBoxDiv.appendChild(buttonsDiv);
     
-      }
-      if (maybe) {
-        const buttonsDiv = document.createElement('div');
-        const maybeButton = document.createElement('button');
-        okButton.innerText = 'maybe';
-        buttonsDiv.appendChild(maybeButton);
-        messageBoxDiv.appendChild(buttonsDiv);
-
-      }
+    
+        
+      
     messageBoxDiv.style.zIndex = nextZIndex++;
 
-    okButton.addEventListener('click', () => {
-      //messageBoxDiv.style.display = 'none';
-      messageBoxDiv.remove();
-
-      modalDiv.style.display = 'none';
-    });
+    
 
     messageBoxDiv.addEventListener('click', () => {
       messageBoxDiv.style.zIndex = nextZIndex++;
