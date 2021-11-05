@@ -39,7 +39,7 @@
      
     }
       recipeNameElem.text(recipe.name);
-     // recipePictureElem.attr('src', recipe.picture);
+     
 
       recipeIngredientsList.empty();
       ingredients.empty();
