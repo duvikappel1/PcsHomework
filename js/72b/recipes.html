@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
     
-  </head>
+    body {
+      text-align: center;
+      background-color: lightblue;
+     
+    }
 
-  <body>
-    <input id="recipe" placeholder="Choose a recipe">
-    <button id="load">load</button>
-    <div>Grilled Vegetables | Mashed Potatoes | Baked Salomon | Fried Chicken</div>
-   
+    #recipe img {
+      width: 300px;
+    }
+    #recipe{
+      background-color: blueviolet;
+      margin-left: 40%;
+      margin-right: 40%;
+      
+     
+      
+    }
 
-    <pre id="result"></pre>
+    #recipe ul {
+      list-style-type: none;
+      padding: 0;
+      
+    }
 
-    
+    #error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dave's Kitchen</h1>
+  <h1 id="error"></h1>
+  <select id="recipes">
+    <option hidden>choose a recipe</option>
+  </select>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="messagebox.js"></script>
-    <script src="recipes.js"></script>
-  </body>
+  <div id="recipe">
+    <h2 id="name"></h2>
+    <h4 id="ingredients"></h4>
+    <ul></ul>
+  </div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="recipes.js"></script>
+</body>
 </html>

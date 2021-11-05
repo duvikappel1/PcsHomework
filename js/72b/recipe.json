@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Grilled Vegetables",
+    "id": 1
+  },
+  {
+    "name":"Fried Chicken",
+    "id": 2
+  },
+  {
+    "name": "Chulent",
+    "id": 3
+  }
+]
