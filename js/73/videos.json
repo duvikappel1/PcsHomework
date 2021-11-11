@@ -1,22 +1,19 @@
 [
   {
     "name": "El Hnaar Hazeh Hispalalty",
-    "id": 1,
+    "image": "ElHanaar.png",
     "url": "El Hanaar Hazeh.mp4"
   },
   {
-    "name":"Ivri",
-    "id": 2,
-    "url": "https://www.dropbox.com/home?preview=ivri.mov"
-  },
-  {
     "name": "Kolzman",
-    "id": 3,
-    "url": "https://www.dropbox.com/sh/nfa0mm8he90hqy4/AAAVHKYbGI1-fb8P4SguqhjAa?dl=0&preview=kolzman.mp4"
+    "image": "Kolzman.png",
+    "url": "kolzman.mp4"
   },
   {
     "name": "Yesh Tikva",
-    "id": 4,
-    "url": "https://www.dropbox.com/sh/nfa0mm8he90hqy4/AAAVHKYbGI1-fb8P4SguqhjAa?dl=0&preview=yesh+tikvah.mp4"
+    "image": "YeshTikva.png",
+    "url": "yesh tikvah.mp4"
   }
+  
+  
 ]

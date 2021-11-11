@@ -23,30 +23,42 @@
       
     }
     
+    #videoList img{
+      width: 200px;
+      height: 100px;
     }
-
-    
+    #videoList li{
+      
+      display: inline-block;
+      
+    }
+    #video{
+      width: 500px;
+      height: 300px;
+    }
       
     
 
-    #error {
-      color: red;
-    }
+   
   </style>
 </head>
 <body>
   <h1>Videos</h1>
   
-  <select id="videoSelect">
-    <option hidden>choose a video</option>
-  </select>
+  
+  
 
-  <div id="videoList">
+  <div id="videoList"> 
+    <h1 id="videoName"></h1>
+    <ul></ul>
+  </div>
+
+
     <h2 id="name"></h2>
     
-      <video controls src=""></video>
+      <video id="video" controls></video>
     
-  </div>
+ 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

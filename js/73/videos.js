@@ -1,51 +1,40 @@
-(function () {
+(async function () {
   'use strict';
 
-  const videoSelect = $('#videoSelect');
-  const videoNameElem = $('#name');
-  const videoList = $('#videoList video');
- 
-
-  async function loadChoices() {
+  async function loadVideos() {
     try {
-      const response = await fetch('videos.json');
-      if (!response.ok) {
-        throw new Error(`${response.status} ${response.statusText}`);
+      const r = await fetch('videos.json');
+      if (!r.ok) {
+        throw new Error(`${r.status} ${r.statusText}`);
       }
-      const choices = await response.json();
-      if (choices) {
-        choices.forEach(videos => {
-          videoSelect.append(`<option value="${videos.id}">${videos.name}</option>`);
-
-        });
+      return await r.json();
+    } catch (e) {
+      console.error(e);
     }
   }
-      catch(e) {
-      console.error('OOPS, ERROR', e);
-    }
-  }
-    loadChoices();
 
-     videoSelect.change(async function () {
-      console.log(this.value);
-      videoNameElem.append(videoSelect);
-      videoList.attr('src', this.url);
-      
-      const request = await fetch(`${this.value}.json`)
-      if (!request) {
-        throw new Error(`${request.status} ${request.statusText}`);
-    }
-      const video = await request.json();
-      if(video){
-      console.log(video);
-      videoList.attr('src', video.url);
-      videoList.play();
-      
-    }
-      
-      videoNameElem.empty();
-      
-      
+  function populateVideoList(videos) {
+    const videoElem = $('#video');
+    const videoList = $('#videoList ul');
+    const videoName = $('#videoName');
+
+    videos.forEach(video => {
+     
+      $(`<li>
+         ${video.name} 
+        <img src="${video.image}" alt="${video.name}">
+      </li>`)
+      .appendTo(videoList)
+      .click(function () {
+        videoElem.attr('src', video.url, );
+        videoElem.attr('controls', true);
+        videoElem[0].play();
+       
+        
+      });
     });
-    
+  }
+
+  const videos = await loadVideos();
+  populateVideoList(videos);
 }());
