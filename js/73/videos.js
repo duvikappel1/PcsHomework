@@ -21,7 +21,7 @@
     videos.forEach(video => {
      
       $(`<li>
-         ${video.name} 
+        <span>${video.name} </span> 
         <img src="${video.image}" alt="${video.name}">
       </li>`)
       .appendTo(videoList)
