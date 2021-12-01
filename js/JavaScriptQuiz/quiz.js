@@ -42,7 +42,10 @@
     print() {
        
       display.append(`customer: ${this.customerName} Address: ${this.customerAddress}`);
-      display.append(`item: ${this.item.item.item} quantity: ${this.item.quantity} price: ${this.item.price}}`) 
+      for(let x = 0; x < this.item.length; x++){
+        display.append(`item: ${this.item.item} quantity: ${this.item.quantity} price: ${this.item.price}`) 
+      }
+      
       
     }
 }
