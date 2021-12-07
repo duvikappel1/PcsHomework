@@ -11,6 +11,7 @@
         const item = new Item(order.items);
         const order3 = new Order(order.customer, order.address, item);
         order3.print();
+        order3.Total;
       });
     });
   
@@ -19,9 +20,9 @@
     
     constructor(items) {
      for(let x=0; x < items.length; x++){
-       this.item = item;
-       this.price = price/quantity;
-       this.quantity = quantity;
+       this.item = items[x].item;
+       this.price = items[x].price/items[x].quantity;
+       this.quantity = items[x].quantity;
        }   
     }
 
@@ -38,12 +39,19 @@
       this.item = item;
 
     }
+    get Total(){
+      let total;
+      for(let j = 0; j < this.item; j++){
+            total += this.item[j].quantiy*this.item[j].price;
+      }  
+      display.append(total);
+    }
 
     print() {
        
       display.append(`customer: ${this.customerName} Address: ${this.customerAddress}`);
       for(let x = 0; x < this.item.length; x++){
-        display.append(`item: ${this.item.item} quantity: ${this.item.quantity} price: ${this.item.price}`) 
+        display.append(`item: ${this.item[x].item} quantity: ${this.item[x].quantity} price: ${this.item[x].price}`) 
       }
       
       
